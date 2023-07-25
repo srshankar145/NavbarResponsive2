@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #97feed;
+  font-family: Poppins;
+  /* overflow: hidden; */
+}
+
+nav {
+  position: relative;
+  background-color: #35a29f;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.btn-nav {
+  cursor: pointer;
+  height: 25px;
+  width: 50px;
+  font-weight: 600px;
+  background-color: #071952;
+  color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-nav:hover {
+  transform: scale(1.25);
+}
+
+.menu {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 65px;
+  border-radius: 5px;
+  height: 200px;
+  width: 180px;
+  background-color: white;
+  color: rgb(181, 3, 181);
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.menu li {
+  list-style-type: none;
+  padding: 0.4rem;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: rgb(181, 3, 181);
+}
+
+.menu li:hover a {
+  color: rgb(181, 3, 181);
+  font-weight: 700;
+}
+
+@keyframes fadeFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeToRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+}
+
+.menu--fade-in {
+  animation: fadeFromRight 0.5s ease-in-out;
+}
+
+.menu--fade-out {
+  animation: fadeToRight 0.5s ease-in-out;
+}
